@@ -136,6 +136,6 @@ int ssdlitemobilenetv3::drawObjects(const cv::Mat& image, const std::vector<Obje
         //}
      }
 
-     cv::imshow("image", image);
+     //cv::imshow("image", image);
      return 0;
 }

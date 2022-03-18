@@ -30,7 +30,7 @@ int main()
     lccv::PiCamera cam;
     cam.options->video_width=1024;
     cam.options->video_height=768;
-    cam.options->framerate=2;
+    cam.options->framerate=3;
     //cam.options->verbose=true;
     //cv::namedWindow("Video",cv::WINDOW_NORMAL);
     cam.startVideo();
@@ -43,7 +43,7 @@ int main()
         else{
             mb3.inference(image, objects);
             mb3.drawObjects(image, objects);
-            /*
+
             Tend = std::chrono::steady_clock::now();
             f = std::chrono::duration_cast <std::chrono::milliseconds> (Tend - Tbegin).count();
             if(f>0.0) FPS[((Fcnt++)&0x0F)]=1000.0/f;
@@ -51,7 +51,7 @@ int main()
             putText(image, cv::format("FPS %0.2f", f/16),cv::Point(10,20),cv::FONT_HERSHEY_SIMPLEX,0.6, cv::Scalar(0, 0, 255));
 
             cv::imshow("Video",image);
-            */
+
             ch=cv::waitKey(10);
 
         }
